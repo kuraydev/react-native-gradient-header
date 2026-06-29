@@ -1,0 +1,5 @@
+blank_issues_enabled: true
+contact_links:
+  - name: Question / Discussion
+    url: https://github.com/kuraydev/react-native-gradient-header/discussions
+    about: Ask questions and discuss usage here.
