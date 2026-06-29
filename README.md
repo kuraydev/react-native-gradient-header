@@ -162,6 +162,15 @@ a managed-friendly gradient can polyfill `react-native-linear-gradient` with
 [`expo-linear-gradient`](https://docs.expo.dev/versions/latest/sdk/linear-gradient/)
 via a Metro alias.
 
+**Default avatar asset (Metro-only):** the bundled default avatar
+(`assets/profile.jpg`) is resolved through React Native's Metro bundler, which
+follows the `react-native`/`source` condition to the TypeScript source in
+`src/`. The zero-prop render therefore works out of the box on React Native via
+Metro. Non-Metro consumers (webpack / `react-native-web`) that hit the
+`default` export condition (`lib/commonjs`) do **not** bundle this asset and
+should pass their own `imageSource` prop rather than relying on the built-in
+default avatar.
+
 ## Contributing
 
 Contributions are welcome! Please read [CONTRIBUTING.md](./CONTRIBUTING.md) and
